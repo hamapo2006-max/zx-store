@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 لوحة التحكم - ZX STORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <header class="header">
+        <div class="logo" onclick="location.href='index.html'">👑 ZX STORE</div>
+        <nav class="nav">
+            <a href="index.html">الرئيسية</a>
+            <a href="admin.html" class="active admin-link">⚙️ لوحة التحكم</a>
+        </nav>
+    </header>
+    
+    <section class="admin-section">
+        <h1 class="section-title"><span class="gold">لوحة</span> التحكم</h1>
+        
+        <div class="stats-container" style="margin-bottom: 40px;">
+            <div class="stat-card">
+                <div class="stat-number" id="totalApps">0</div>
+                <div class="stat-label">إجمالي التطبيقات</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="activeApps">0</div>
+                <div class="stat-label">تطبيقات نشطة</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalDownloads">0</div>
+                <div class="stat-label">إجمالي التحميلات</div>
+            </div>
+        </div>
+        
+        <div class="admin-panel">
+            <h2 style="color: #FFD700; margin-bottom: 30px;">➕ إضافة تطبيق جديد</h2>
+            
+            <form id="appForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>اسم التطبيق</label>
+                        <input type="text" id="appName" placeholder="مثال: ESign" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>التصنيف</label>
+                        <select id="appCategory" required>
+                            <option value="">اختر تصنيف</option>
+                            <option value="أدوات">أدوات</option>
+                            <option value="وسائط">وسائط</option>
+                            <option value="ألعاب">ألعاب</option>
+                            <option value="تواصل">تواصل</option>
+                            <option value="إنتاجية">إنتاجية</option>
+                            <option value="تعليم">تعليم</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>الإصدار</label>
+                        <input type="text" id="appVersion" placeholder="4.0.0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>أيقونة (رمز إيموجي)</label>
+                        <input type="text" id="appIcon" placeholder="📱" value="📱">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>وصف التطبيق</label>
+                    <textarea id="appDesc" rows="3" placeholder="وصف تفصيلي..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>رابط التثبيت (itms-services://...)</label>
+                    <input type="url" id="appUrl" placeholder="itms-services://?action=download-manifest&url=..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label>صورة التطبيق</label>
+                    <div class="file-upload" onclick="document.getElementById('appImage').click()">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>اضغط لرفع صورة</p>
+                        <small>PNG, JPG, GIF (أقصى 5MB)</small>
+                        <input type="file" id="appImage" accept="image/*" style="display: none;">
+                    </div>
+                    <img id="imagePreview" class="preview-image" style="display: none;">
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i> إضافة التطبيق
+                </button>
+            </form>
+        </div>
+        
+        <div class="admin-panel">
+            <h2 style="color: #FFD700; margin-bottom: 30px;">📋 إدارة التطبيقات</h2>
+            
+            <table class="apps-table">
+                <thead>
+                    <tr>
+                        <th>الصورة</th>
+                        <th>الاسم</th>
+                        <th>التصنيف</th>
+                        <th>الإصدار</th>
+                        <th>التحميلات</th>
+                        <th>الحالة</th>
+                        <th>إجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="appsTableBody">
+                    <tr>
+                        <td colspan="7" style="text-align: center; padding: 40px;">جاري التحميل...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
