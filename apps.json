@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "ESign",
+        "desc": "أداة توقيع التطبيقات بدون كمبيوتر",
+        "version": "4.0.0",
+        "icon": "📝",
+        "category": "أدوات",
+        "downloads": 15420,
+        "url": "itms-services://?action=download-manifest&url=https://example.com/esign.plist",
+        "image": "https://via.placeholder.com/200/4A2C7A/FFD700?text=ESign",
+        "active": true
+    },
+    {
+        "id": 2,
+        "name": "uYou+",
+        "desc": "يوتيوب بدون إعلانات مع تحميل",
+        "version": "19.08.3",
+        "icon": "▶️",
+        "category": "وسائط",
+        "downloads": 23200,
+        "url": "itms-services://?action=download-manifest&url=https://example.com/uyou.plist",
+        "image": "https://via.placeholder.com/200/4A2C7A/FFD700?text=uYou",
+        "active": true
+    }
+]
