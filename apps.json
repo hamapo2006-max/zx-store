@@ -7,8 +7,8 @@
         "icon": "📝",
         "category": "أدوات",
         "downloads": 15420,
-        "url": "itms-services://?action=download-manifest&url=https://example.com/esign.plist",
-        "image": "https://via.placeholder.com/200/4A2C7A/FFD700?text=ESign",
+        "url": "itms-services://?action=download-manifest&url=https://hamapo2006-max.github.io/zz-store/plists/esign.plist",
+        "image": "https://hamapo2006-max.github.io/zz-store/icons/esign-icon.png",
         "active": true
     },
     {
@@ -19,8 +19,8 @@
         "icon": "▶️",
         "category": "وسائط",
         "downloads": 23200,
-        "url": "itms-services://?action=download-manifest&url=https://example.com/uyou.plist",
-        "image": "https://via.placeholder.com/200/4A2C7A/FFD700?text=uYou",
+        "url": "itms-services://?action=download-manifest&url=https://hamapo2006-max.github.io/zz-store/plists/uyou.plist",
+        "image": "https://hamapo2006-max.github.io/zz-store/icons/uyou-icon.png",
         "active": true
     }
 ]
